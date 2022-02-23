@@ -14,7 +14,7 @@ def number_table_generator(number: int = 10) -> typing.List[int]:
     return number_table
 
 
-def lotto_machine_mixer(numbers: typing.List[int], table_of_numbers: typing.List[int]) -> int:
+def random_number_table_generator(numbers: typing.List[int], table_of_numbers: typing.List[int]) -> typing.List[int]:
     """ Generator of 6 random numbers to be compared with given numbers
     :param table_of_numbers: [1,2,4,5,...,49] -> or any other table to be mixed
     :param numbers: [4,8,12,5,10,22] -> numbers we want to bet
@@ -28,6 +28,8 @@ def lotto_machine_mixer(numbers: typing.List[int], table_of_numbers: typing.List
     numbers_hit = len((set(numbers)) & (set(randomly_mixed_numbers)))
     return numbers_hit
 
+def winning_numbers_counter(picked_numbers: typing.List[int], random_numbers: typing.List[int]) -> int:
+
 
 how_many_times_played = 0
 cost_of_one_bet = 3
@@ -36,7 +38,7 @@ base_number_table = number_table_generator(49)
 
 while True:
     how_many_times_played += 1
-    if lotto_machine_mixer(bet_numbers, base_number_table.copy()) == 6:
+    if random_number_table_generator(bet_numbers, base_number_table.copy()) == 6:
         break
 
 sum_of_money_spent = cost_of_one_bet * how_many_times_played
