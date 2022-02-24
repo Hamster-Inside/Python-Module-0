@@ -27,7 +27,8 @@ def random_number_table_generator(table_of_numbers: typing.List[int]) -> typing.
     return randomly_mixed_numbers
 
 
-def winning_numbers_counter(picked_numbers: typing.List[int], random_numbers: typing.List[int]) -> int:
+def winning_numbers_counter(picked_numbers: typing.List[int],
+                            random_numbers: typing.List[int]) -> int:
     """ Returns number of numbers that are the same in random number list
     :param picked_numbers: [1,3,22,11,38,40]
     :param random_numbers: [38,22,5,7,8,9]
@@ -44,7 +45,7 @@ base_number_table = number_table_generator(49)
 
 while True:
     how_many_times_played += 1
-    random_lotto_numbers = random_number_table_generator(base_number_table)
+    random_lotto_numbers = random_number_table_generator(base_number_table.copy())
     if winning_numbers_counter(bet_numbers, random_lotto_numbers) == 6:
         break
 
