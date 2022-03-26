@@ -2,15 +2,9 @@
 <module type="PYTHON_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
-      <excludeFolder url="file://$MODULE_DIR$/venv" />
-      <excludeFolder url="file://$MODULE_DIR$/2021-08-17-Python" />
       <excludeFolder url="file://$MODULE_DIR$/env" />
     </content>
-<<<<<<< HEAD
     <orderEntry type="jdk" jdkName="Python 3.10 (Module-00)" jdkType="Python SDK" />
-=======
-    <orderEntry type="inheritedJdk" />
->>>>>>> 30471169f500d75e39b329ca5f5eab53b5ce777e
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>
