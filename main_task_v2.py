@@ -13,9 +13,9 @@ def winning_numbers_counter(picked_numbers: typing.Set[int],
     numbers_hit = len(picked_numbers & random_numbers)
     return numbers_hit
 
-def random_numbers_generator():
-    return
 
+def random_numbers_generator():
+    return set(random.sample(base_number_table, k=6))
 
 
 if __name__ == '__main__':
@@ -26,7 +26,7 @@ if __name__ == '__main__':
     random_lotto_numbers = []
     while bet_numbers != random_lotto_numbers:
         how_many_times_played += 1
-        random_lotto_numbers = set(random.sample(base_number_table, k=6))
+        random_lotto_numbers = random_numbers_generator()
 
     sum_of_money_spent = cost_of_one_bet * how_many_times_played
 
