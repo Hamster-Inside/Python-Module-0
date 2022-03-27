@@ -117,5 +117,5 @@ print(f'Total winnings: {total_winning_money} PLN')
 print('RESULTS:')
 pos = 0
 for hits in hits_list:
-    print(f'{pos + 1}. {hits_list[pos]} hits --> won {add_to_win[pos]} PLN')
+    print(f"{'0' if pos < 9 else ''}{pos + 1}. {hits_list[pos]} hits --> won {add_to_win[pos]} PLN")
     pos += 1
